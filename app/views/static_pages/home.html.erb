@@ -1,2 +1,17 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<html>
+
+    <head>
+    </head>
+
+    <h1>StaticPages#home</h1>
+    <p>Find me in app/views/static_pages/home.html.erb</p>
+
+    <%= form_for :color_palette_choice, :html => {:id => "try"} do |f|%>
+        <% @colors.each_with_index do |clr, index| %>
+            <%= render partial: 'layouts/color_setter.html.erb', :locals => {:parent_form => f, 
+                        :color => clr, :id_for_slider => "color_slider#{index}",
+                        :id_for_box => "color_box#{index}"} %>
+        <%end %>
+    <% end %>
+
+<html>

@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.wrapper-div {
+    overflow: hidden; /* add this to contain floated children */
+}
+.wrapped-div {
+    float:left;
+}

@@ -1,0 +1,10 @@
+<div class="wrapper-div">
+
+    <div class="small-color-value-slider wrapped-div">
+        <%= parent_form.range_field :w1, :min=>0, :max=>200, :value=>90, :step=>1, :id=> id_for_slider%>
+    </div>
+
+    <div class="small-color-box wrapped-div" style="background-color:<%= color %>" id="<%=id_for_box%>">
+    </div>
+
+</div>
