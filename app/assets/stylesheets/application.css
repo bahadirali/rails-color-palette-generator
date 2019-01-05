@@ -16,7 +16,12 @@
 
 .wrapper-div {
     overflow: hidden; /* add this to contain floated children */
+    margin: 10px;
 }
 .wrapped-div {
     float:left;
+}
+
+.color-text {
+    margin: 10px;
 }

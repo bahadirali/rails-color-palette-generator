@@ -1,13 +1,17 @@
 <div class="wrapper-div">
 
-    <div class="small-color-value-slider wrapped-div">
+    <div class="wrapped-div small-color-value-slider">
         <%= parent_form.range_field :w1, :min=>color_hue[0], :max=>color_hue[1], 
             :value=> color_hue[0], :step=>0.5, :id=> id_for_slider, 
             :class => "color_slider", :autocomplete => :off%>
     </div>
 
-    <div class="small-color-box wrapped-div" style="background-color:hsl(<%=color_hue[0]%>, 100%, 50%)" 
+    <div class="wrapped-div small-color-box" style="background-color:hsl(<%=color_hue[0]%>, 100%, 50%)"
         id="<%=id_for_box%>">
+    </div>
+
+    <div class="wrapped-div color-text" id="<%=id_for_text%>">
+        hls('<%=color_hue[0]%>', 100%, 50%)
     </div>
 
 </div>

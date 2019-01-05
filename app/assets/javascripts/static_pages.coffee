@@ -10,5 +10,7 @@ $(document).on "change", ".color_slider", ->
     #console.log(hue)
     id = $(this)[0].id
     id = id[id.length-1]
-    id = "#color_box" + id
-    $(id).css('background-color', 'hsl(' + hue + ', 100%, 50%)')
+    id_box = "#color_box" + id
+    id_text =  "#text" + id
+    $(id_box).css('background-color', 'hsl(' + hue + ', 100%, 50%)')
+    $(id_text).text('hsl(' + hue + ', 100%, 50%)')

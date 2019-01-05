@@ -7,7 +7,8 @@
         <% @color_hues.each_with_index do |clr_hue, index| %>
             <%= render partial: 'layouts/color_setter.html.erb', :locals => {:parent_form => f, 
                         :color_hue => clr_hue, :id_for_slider => "color_slider#{index}",
-                        :id_for_box => "color_box#{index}"} %>
+                        :id_for_box => "color_box#{index}",
+                        :id_for_text => "text#{index}"} %>
         <%end %>
     <% end %>
 
