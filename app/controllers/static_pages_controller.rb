@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
 
   def home
-    @colors = ['#ff0000', '#00ff00', '#0000ff']  
-    #@colors = Array.new(3)
+    @color_hues = [[-12, 27], [33, 87], [95,160], [170,245], [265,335]]  
   end
 end

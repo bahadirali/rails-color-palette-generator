@@ -2,7 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).on "change", '#color_slider0', -> 
-    console.log ("Hello")
-    console.log($(this).val())
-    $('#color_box0').css('background-color', $(this).val())
+$(document).on "change", ".color_slider", -> 
+    #console.log ("Hello")
+    #console.log($(this))
+    #console.log($(this)[0].max)
+    hue = $(this).val()
+    #console.log(hue)
+    id = $(this)[0].id
+    id = id[id.length-1]
+    id = "#color_box" + id
+    $(id).css('background-color', 'hsl(' + hue + ', 100%, 50%)')
